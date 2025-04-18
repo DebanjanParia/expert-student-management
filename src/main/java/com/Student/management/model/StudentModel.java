@@ -13,11 +13,12 @@ import java.util.Random;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentModel {
+ public class StudentModel {
 
 
 //id, Name, studentId, address, mobNo, email, resistrationNo, resistration_year,
 // regi_date, passing_year, isPassed, lastModifiedDate
+
     //private long id;
     private long studentId;
     private String firstName;
@@ -78,8 +79,6 @@ public class StudentModel {
         String s = timestamp.toString().substring(0,10);
         studentEntity.setRegistrationDate(s);
         studentEntity.setRegistrationYear(Long.parseLong(s.substring(0,4)));
-
-
 
     }
 

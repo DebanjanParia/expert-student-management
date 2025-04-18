@@ -21,7 +21,6 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    //private UserModel userModel;
 
     @Override
     public StudentModel newStudentRegistration(StudentModel studentModel) {
