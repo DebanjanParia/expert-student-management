@@ -5,11 +5,9 @@ import com.Student.management.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.Student.management.model.RequestModel;
 
-import java.time.LocalDate;
 import java.util.List;
 
 
@@ -62,6 +60,7 @@ public class StudentController {
     public ResponseEntity<List<StudentModel>> searchByPassingYear(@RequestParam int passingYear){
         return new ResponseEntity<>(studentService.sortByPassingYear(passingYear), HttpStatusCode.valueOf(200));
     }
+
 
     @GetMapping("/search-by-registration-year")
     public ResponseEntity<List<StudentModel>> searchByRegistrationYear(@RequestParam int registrationYear){
